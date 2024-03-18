@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{.Title}}</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			background-color: #eee;
+		}
+		.main {
+			padding: 20px 40px;
+			background: white;
+			width: 80%;
+			height: 100vh;
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
+
+        .count-wrapp {
+            display: inline-block;
+            padding: 0 10px;
+            border: 1px solid #aaa;
+        }
+
+		.login-form {
+			display: flex;
+			/* flex-direction: column; */
+			align-items: center;
+		}
+	</style>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+	<div class="main">
+        {{ embed }}
+	</div>
+	
+</body>
+</html>
