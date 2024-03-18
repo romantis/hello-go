@@ -1,0 +1,22 @@
+<section class="counter">
+	<button hx-post="/countdown" 
+		hx-target=".counter"
+		 hx-swap="innerHTML"
+		 {{if le .Count 1}} 
+		 disabled
+		 {{end}}
+		 >
+		 Count Down
+		</button>
+	<span class="count-wrapp">
+		Count <span class="count">
+			{{ .Count}}
+		</span>
+	</span>
+	<button hx-post="/countup" 
+		hx-target=".counter"
+		 hx-swap="innerHTML">Count Up</button>
+	<button hx-post="/countreset" 
+		hx-target=".counter"
+		 hx-swap="innerHTML">Reset</button>
+</section>

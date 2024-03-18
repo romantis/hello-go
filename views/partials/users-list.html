@@ -1,0 +1,14 @@
+<section class="users-list">
+    <h2>All Users</h2>
+    
+    {{if not .Users}}
+    <p>No users added</p>
+    {{else}}
+    <dl>
+    {{range .Users}}
+    <dt>Username: {{.Name}}</dt>
+    <dd>Email: {{.Email}}</dd>
+    {{end}}
+    </dl>
+    {{end}}
+</section>
